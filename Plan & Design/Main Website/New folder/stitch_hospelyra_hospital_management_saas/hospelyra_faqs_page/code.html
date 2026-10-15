@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Hospelyra - Modern Hospital Management SaaS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#006a63","inverse-primary":"#80d5cb","surface-container-low":"#f2f3ff","secondary":"#006a61","on-primary-container":"#a3faef","primary-container":"#0f766e","surface":"#faf8ff","on-secondary-container":"#006f66","tertiary-container":"#00776b","on-tertiary-fixed":"#00201c","surface-variant":"#dae2fd","tertiary":"#005c52","primary-fixed":"#9cf2e8","surface-container":"#eaedff","on-surface-variant":"#3e4947","on-primary-fixed-variant":"#00504a","surface-dim":"#d2d9f4","background":"#faf8ff","inverse-on-surface":"#eef0ff","on-secondary-fixed-variant":"#005049","tertiary-fixed":"#71f8e4","surface-bright":"#faf8ff","secondary-container":"#86f2e4","surface-container-lowest":"#ffffff","outline-variant":"#bdc9c6","on-primary-fixed":"#00201d","on-error-container":"#93000a","on-surface":"#131b2e","surface-container-highest":"#dae2fd","inverse-surface":"#283044","on-secondary":"#ffffff","secondary-fixed":"#89f5e7","primary":"#005c55","on-tertiary-fixed-variant":"#005048","primary-fixed-dim":"#80d5cb","on-tertiary-container":"#84ffec","error-container":"#ffdad6","on-background":"#131b2e","on-primary":"#ffffff","tertiary-fixed-dim":"#4fdbc8","on-secondary-fixed":"#00201d","on-tertiary":"#ffffff","on-error":"#ffffff","surface-container-high":"#e2e7ff","outline":"#6e7977","error":"#ba1a1a","secondary-fixed-dim":"#6bd8cb"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","space-xl":"2.5rem","space-md":"1rem","gutter-mobile":"1rem","margin":"2rem","gutter":"1.5rem"},fontFamily:{"headline-sm":["Plus Jakarta Sans"],"tabular-nums":["Inter"],"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"]},fontSize:{"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"tabular-nums":["14px",{lineHeight:"20px",fontWeight:"500"}],"label-md":["13px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}],"display-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"600"}],"display-lg-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1600px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="Hospelyra Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vpt5HlLVbYEc-A-03DCbAw0w4itnVBsQqIHXOeVH3qWGJ7UIrl4ywatCmOw2MUn0-QUx_mLLA1ydUyYIQy1KpOi_ZnsoBFvofVVnb-a8mGwvkKZPrpB2X3yq1kzD1rS5ioUuZhOKXyVwMHNlEptQOkOpQ6nWuPgAjKvuKi6QBPpScGK2oRr9Rlsyn-YL_6e19vkuqnj52_znmiCk1p_VjK0-TwSpCidXwBL6TKG1r2E52ACtOOC1BC9LNC"/><span class="font-headline-md text-headline-md text-primary tracking-tight">Hospelyra</span></a><nav class="hidden md:flex items-center gap-space-lg ml-space-md" data-active-classes="text-primary font-headline-sm"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="features" href="#">Features</a><a aria-current="page" class="transition-colors text-primary font-headline-sm" data-path="faqs" href="#">FAQs</a></nav></div><div class="flex items-center gap-space-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary px-space-sm py-space-xs transition-colors" data-path="login" href="#">Sign In</a><a class="font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-sm rounded-lg transition-all shadow-sm font-semibold" data-path="get-started" href="#">Get Started</a><div class="flex items-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer transition-transform hover:scale-105"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<section class="relative w-full overflow-hidden bg-surface-container-low px-margin py-space-xl">
+<div class="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/4 -bottom-32 h-80 w-80 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto flex flex-col items-center text-center relative z-10">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface shadow-sm mb-space-md">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Support &amp; Knowledge Hub</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight max-w-3xl mb-space-sm">
+        Frequently Asked Questions
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl">
+        Find comprehensive answers about Hospelyra platform implementation, security protocols, hospital accounts, and workflow automation.
+      </p>
+<div class="w-full max-w-2xl relative shadow-md rounded-xl">
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl p-space-xs">
+<span class="material-symbols-outlined text-outline ml-space-sm text-[22px]">search</span>
+<input class="w-full bg-transparent px-space-sm py-space-sm font-body-md text-body-md text-on-surface placeholder-outline focus:outline-none" id="faq-search" placeholder="Search questions by topic, e.g., HL7 integration, HIPAA, bed management..." type="text"/>
+<button class="hidden text-outline hover:text-on-surface p-1 mr-space-xs" id="clear-search">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-xs mt-space-lg" id="category-tabs">
+<button class="cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-primary text-on-primary shadow-sm" data-cat="all">
+          All Questions
+        </button>
+<button class="cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-cat="general">
+          General
+        </button>
+<button class="cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-cat="accounts">
+          Accounts &amp; Approvals
+        </button>
+<button class="cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-cat="subscriptions">
+          Subscriptions &amp; Pricing
+        </button>
+<button class="cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" data-cat="security">
+          Platform &amp; Security
+        </button>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<div class="lg:col-span-8 flex flex-col gap-space-md" id="faq-accordion-list">
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all" data-category="general">
+<button class="w-full text-left p-space-lg flex items-center justify-between gap-space-md group cursor-pointer focus:outline-none">
+<div class="flex items-start gap-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">General Rollout</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">How quickly can a 200-bed hospital deploy Hospelyra?</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="faq-body hidden px-space-lg pb-space-lg pt-0">
+<div class="pl-11 flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+                A standard 200-bed clinical site completes deployment within a structured <strong>14-day phased timeline</strong>. Our dedicated deployment team conducts data schema mapping and ingests historical clinical records within the initial 72 hours using standardized HL7 v2 and FHIR v4 pipelines.
+              </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm py-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-primary font-bold block mb-1">Days 1 - 4</span>
+<span class="font-body-sm text-body-sm text-on-surface">Data schema mapping &amp; historical patient ingestion</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-primary font-bold block mb-1">Days 5 - 10</span>
+<span class="font-body-sm text-body-sm text-on-surface">Physician &amp; nursing station sandbox certification</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-primary font-bold block mb-1">Days 11 - 14</span>
+<span class="font-body-sm text-body-sm text-on-surface">Parallel run validation &amp; active bed go-live</span>
+</div>
+</div>
+<p>
+                Each ward is provisioned with pre-configured role profiles, allowing nurse supervisors, intake clerks, and attending staff to transition with minimal workflow interruption.
+              </p>
+</div>
+</div>
+</div>
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all" data-category="general">
+<button class="w-full text-left p-space-lg flex items-center justify-between gap-space-md group cursor-pointer focus:outline-none">
+<div class="flex items-start gap-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Interoperability</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Can Hospelyra integrate with our existing laboratory and PACS imaging systems?</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="faq-body hidden px-space-lg pb-space-lg pt-0">
+<div class="pl-11 flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+                Yes. Hospelyra includes built-in bidirectional connectors for all primary LIS (Laboratory Information Systems) and modern PACS/DICOM image servers. Lab orders automatically produce accession barcodes, and diagnostic results feed straight into the patient's unified timeline via webhook callbacks.
+              </p>
+<p>
+                For radiological evaluations, clinicians can launch full-fidelity DICOM viewers directly inside the patient drawer without requiring third-party plugins or external window context switching.
+              </p>
+</div>
+</div>
+</div>
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all" data-category="accounts">
+<button class="w-full text-left p-space-lg flex items-center justify-between gap-space-md group cursor-pointer focus:outline-none">
+<div class="flex items-start gap-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Identity &amp; Governance</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Why do new hospital administrator registrations require verification?</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="faq-body hidden px-space-lg pb-space-lg pt-0">
+<div class="pl-11 flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+                Because Hospelyra interfaces with mission-critical Protected Health Information (PHI) and hospital command configurations, administrator tier requests must pass rigorous credential vetting. We cross-verify hospital National Provider Identifier (NPI) credentials, state licensing filings, and organization domain ownership.
+              </p>
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-[28px]">speed</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Guaranteed 24-Hour Review Turnaround</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Our clinical compliance officers authenticate all corporate accounts within 24 business hours to maintain security integrity.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all" data-category="accounts">
+<button class="w-full text-left p-space-lg flex items-center justify-between gap-space-md group cursor-pointer focus:outline-none">
+<div class="flex items-start gap-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Access Control</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">How do role-based permissions work for physicians vs administrative clerks?</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="faq-body hidden px-space-lg pb-space-lg pt-0">
+<div class="pl-11 flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+                Hospelyra enforces strict <em>HIPAA Minimum Necessary Access</em> standards through customizable Role-Based Access Controls (RBAC). 
+              </p>
+<ul class="list-disc pl-5 flex flex-col gap-1 text-body-md">
+<li><strong>Attending Physicians &amp; Specialists:</strong> Unrestricted access to complete clinical history, medication logs, real-time telemetry, lab orders, and diagnostic charting for admitted or consulted patients.</li>
+<li><strong>Administrative &amp; Triage Clerks:</strong> Restricted access limited to demographic attributes, insurance eligibility verification, bed assignment boards, and billing metadata with clinical diagnosis fields automatically masked.</li>
+</ul>
+<p>
+                Every record query is recorded in immutable, tamper-evident audit logs exportable for compliance oversight.
+              </p>
+</div>
+</div>
+</div>
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all" data-category="subscriptions">
+<button class="w-full text-left p-space-lg flex items-center justify-between gap-space-md group cursor-pointer focus:outline-none">
+<div class="flex items-start gap-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Capacity Scaling</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Can we adjust bed capacity or add new clinic branches mid-contract?</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="faq-body hidden px-space-lg pb-space-lg pt-0">
+<div class="pl-11 flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+                Yes. Hospelyra contracts are dynamically scalable to match operational surges, new facility acquisitions, or seasonal ICU bed expansions. Hospital executives can allocate extra virtual or physical beds through the Enterprise Console with instant provisioning.
+              </p>
+<p>
+                Invoicing prorates transparently across the remaining active billing cycle with zero penalty fees or administrative lockouts.
+              </p>
+</div>
+</div>
+</div>
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all" data-category="subscriptions">
+<button class="w-full text-left p-space-lg flex items-center justify-between gap-space-md group cursor-pointer focus:outline-none">
+<div class="flex items-start gap-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Reliability &amp; SLA</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">What level of SLA and disaster recovery is guaranteed in our contract?</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="faq-body hidden px-space-lg pb-space-lg pt-0">
+<div class="pl-11 flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+                We provide a contractual <strong>99.99% uptime Service Level Agreement</strong> backed by financial credits. All clinical cluster infrastructure runs across active-active geographically separated medical availability zones.
+              </p>
+<div class="grid grid-cols-2 gap-space-md py-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">autorenew</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">15-Minute RPO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated encrypted point-in-time snapshots</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">electric_bolt</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">&lt; 60-Second RTO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant geographic failover routing</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm transition-all" data-category="security">
+<button class="w-full text-left p-space-lg flex items-center justify-between gap-space-md group cursor-pointer focus:outline-none">
+<div class="flex items-start gap-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Regulatory Compliance</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Is Hospelyra fully HIPAA and HITECH compliant?</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface-variant group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</div>
+</button>
+<div class="faq-body hidden px-space-lg pb-space-lg pt-0">
+<div class="pl-11 flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+                Unconditionally. Hospelyra undergoes continuous independent audits and maintains annual SOC 2 Type II, ISO 27001, and HIPAA/HITECH certifications. We execute comprehensive Business Associate Agreements (BAAs) prior to any clinical data ingestion.
+              </p>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Enterprise Security Safeguards:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• AES-256 military-grade encryption for all database volumes at rest</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• TLS 1.3 cryptographic tunneling for all telemetry data in motion</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Multi-factor biometric hardware token enforcement (FIDO2/WebAuthn)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden p-space-xl text-center flex flex-col items-center justify-center bg-surface-container-lowest rounded-xl shadow-sm" id="no-results">
+<span class="material-symbols-outlined text-outline text-[48px] mb-space-sm">sentiment_dissatisfied</span>
+<span class="font-headline-md text-headline-md text-on-surface mb-1">No matching questions found</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-md">
+            We couldn't find an answer matching your query. Contact our clinical technical leads directly for rapid assistance.
+          </p>
+<button class="font-label-md text-label-md text-primary hover:underline" id="reset-filter-btn">
+            Clear search filters
+          </button>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div class="rounded-xl overflow-hidden shadow-md bg-surface-container-lowest flex flex-col">
+<div class="h-44 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A modern hospital command center with a clinical operations specialist interacting with multi-screen monitors displaying teal telemetry graphs, data charts, and hospital floorplans in soft clinical lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2gCV1cYRanC5zFsrukspwMboBtPBiIcrBq-Ojg6w-E4yvQ_EcT8KLKk7nRMkPylxYFJmiLqyCqsT71I-4JrWj4YMjohpb7oa1NPafIfh8BlHrESkptyHuOoP5kqRLM172EMWQhr1KPPFQbqRKJI9hYQtje3Nrd18eUi56YVRyjKWcF468OF2SS8p_pLvWrOWUKjdvQJ7EV8WXrh-INODlGknln_oiAU5f8nOtBV9tP1CTgjzHOxKC8g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md -mt-6 relative z-10">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container w-fit">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span class="font-label-sm text-label-sm font-semibold">24/7 Clinical Support</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs">
+                Still have questions about hospital deployment?
+              </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Our clinical solutions engineers partner with your Chief Medical Information Officer (CMIO) and IT staff to evaluate technical architecture requirements.
+              </p>
+</div>
+<div class="flex flex-col gap-space-sm py-space-xs">
+<a class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group" href="tel:18004677597">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Live Hotline</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">+1-800-HOSP-LYRA</span>
+</div>
+</a>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Response Window</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">&lt; 15 Mins Guaranteed</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md py-space-sm px-space-md rounded-lg transition-all shadow-sm flex items-center justify-center gap-space-xs">
+<span>Schedule Architecture Review</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+</div>
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Verified Compliance Status</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary">SOC 2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Type II Certified</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary">HIPAA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fully Compliant</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary">HL7 / FHIR</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Interoperable</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary">ISO 27001</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Audited Standard</span>
+</div>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center justify-between pt-space-xs" href="#">
+<span>Download Compliance Whitepaper</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full bg-surface-container-low py-space-xl px-margin">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-1 max-w-xl">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Enterprise Reliability</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Experience Hospelyra within your clinical wards</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Join over 120+ leading health networks operating with 99.99% critical uptime.</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="bg-surface-container-lowest text-on-surface hover:bg-surface font-label-md text-label-md px-space-lg py-space-sm rounded-lg shadow-sm transition-all">
+          Explore Features
+        </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md px-space-lg py-space-sm rounded-lg shadow-sm transition-all">
+          Request System Sandbox
+        </button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const accordionItems = document.querySelectorAll('.faq-item');
+    const catButtons = document.querySelectorAll('.cat-btn');
+    const searchInput = document.getElementById('faq-search');
+    const clearBtn = document.getElementById('clear-search');
+    const noResults = document.getElementById('no-results');
+    const resetFilterBtn = document.getElementById('reset-filter-btn');
+
+    let activeCategory = 'all';
+
+    accordionItems.forEach(item => {
+      const trigger = item.querySelector('button');
+      const body = item.querySelector('.faq-body');
+      const icon = item.querySelector('.material-symbols-outlined:last-child');
+
+      trigger.addEventListener('click', () => {
+        const isExpanded = !body.classList.contains('hidden');
+        
+        accordionItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.querySelector('.faq-body').classList.add('hidden');
+            otherItem.querySelector('.material-symbols-outlined:last-child').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        if (isExpanded) {
+          body.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    function filterFAQs() {
+      const query = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      accordionItems.forEach(item => {
+        const categoryMatch = activeCategory === 'all' || item.dataset.category === activeCategory;
+        const textContent = item.textContent.toLowerCase();
+        const searchMatch = query === '' || textContent.includes(query);
+
+        if (categoryMatch && searchMatch) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+
+      if (query.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+    }
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => {
+          b.className = 'cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm';
+        });
+        btn.className = 'cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-primary text-on-primary shadow-sm';
+        
+        activeCategory = btn.dataset.cat;
+        filterFAQs();
+      });
+    });
+
+    searchInput.addEventListener('input', filterFAQs);
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      filterFAQs();
+      searchInput.focus();
+    });
+
+    resetFilterBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      activeCategory = 'all';
+      catButtons.forEach(b => {
+        if(b.dataset.cat === 'all') {
+          b.className = 'cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-primary text-on-primary shadow-sm';
+        } else {
+          b.className = 'cat-btn font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm';
+        }
+      });
+      filterFAQs();
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface"><div class="max-w-[1600px] mx-auto px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-xl pb-space-xl border-b border-outline-variant/20"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Hospelyra Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vpt5HlLVbYEc-A-03DCbAw0w4itnVBsQqIHXOeVH3qWGJ7UIrl4ywatCmOw2MUn0-QUx_mLLA1ydUyYIQy1KpOi_ZnsoBFvofVVnb-a8mGwvkKZPrpB2X3yq1kzD1rS5ioUuZhOKXyVwMHNlEptQOkOpQ6nWuPgAjKvuKi6QBPpScGK2oRr9Rlsyn-YL_6e19vkuqnj52_znmiCk1p_VjK0-TwSpCidXwBL6TKG1r2E52ACtOOC1BC9LNC"/><span class="font-headline-md text-headline-md text-primary">Hospelyra</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Unified clinical management, bed tracking, and electronic health record coordination built for modern enterprise hospitals and regional health systems.</p><div class="flex flex-col gap-space-xs pt-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Hospital Support Contact</span><a class="font-label-md text-label-md text-primary hover:underline" href="mailto:support@hospelyra.health">support@hospelyra.health</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Product</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Features</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Dashboard</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Security</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Pricing</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Hospital Solutions</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Inpatient</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Outpatient</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Clinical Staff</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Bed Management</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Resources</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Documentation</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">FAQs</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Support</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Compliance &amp; HIPAA</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Company</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">About Us</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Contact</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Privacy</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Terms</li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col sm:flex-row items-center gap-space-sm w-full md:w-auto"><span class="font-label-md text-label-md text-on-surface font-medium whitespace-nowrap">Subscribe to Clinical Updates</span><div class="flex items-center gap-space-xs w-full sm:w-auto"><input class="bg-surface-container-low border border-outline-variant/60 rounded-lg px-space-md py-space-xs font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full sm:w-64" placeholder="director@hospital.org" type="email"/><button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap">Join</button></div></div><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right">© 2025 Hospelyra Inc. All rights reserved. HIPAA Compliant.</p></div></div></footer></body></html>

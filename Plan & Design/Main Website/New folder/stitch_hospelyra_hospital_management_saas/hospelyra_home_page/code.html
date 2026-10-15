@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Hospelyra - Modern Hospital Management SaaS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#006a63","inverse-primary":"#80d5cb","surface-container-low":"#f2f3ff","secondary":"#006a61","on-primary-container":"#a3faef","primary-container":"#0f766e","surface":"#faf8ff","on-secondary-container":"#006f66","tertiary-container":"#00776b","on-tertiary-fixed":"#00201c","surface-variant":"#dae2fd","tertiary":"#005c52","primary-fixed":"#9cf2e8","surface-container":"#eaedff","on-surface-variant":"#3e4947","on-primary-fixed-variant":"#00504a","surface-dim":"#d2d9f4","background":"#faf8ff","inverse-on-surface":"#eef0ff","on-secondary-fixed-variant":"#005049","tertiary-fixed":"#71f8e4","surface-bright":"#faf8ff","secondary-container":"#86f2e4","surface-container-lowest":"#ffffff","outline-variant":"#bdc9c6","on-primary-fixed":"#00201d","on-error-container":"#93000a","on-surface":"#131b2e","surface-container-highest":"#dae2fd","inverse-surface":"#283044","on-secondary":"#ffffff","secondary-fixed":"#89f5e7","primary":"#005c55","on-tertiary-fixed-variant":"#005048","primary-fixed-dim":"#80d5cb","on-tertiary-container":"#84ffec","error-container":"#ffdad6","on-background":"#131b2e","on-primary":"#ffffff","tertiary-fixed-dim":"#4fdbc8","on-secondary-fixed":"#00201d","on-tertiary":"#ffffff","on-error":"#ffffff","surface-container-high":"#e2e7ff","outline":"#6e7977","error":"#ba1a1a","secondary-fixed-dim":"#6bd8cb"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","space-xl":"2.5rem","space-md":"1rem","gutter-mobile":"1rem","margin":"2rem","gutter":"1.5rem"},fontFamily:{"headline-sm":["Plus Jakarta Sans"],"tabular-nums":["Inter"],"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"]},fontSize:{"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"tabular-nums":["14px",{lineHeight:"20px",fontWeight:"500"}],"label-md":["13px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}],"display-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"600"}],"display-lg-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1600px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="Hospelyra Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vpt5HlLVbYEc-A-03DCbAw0w4itnVBsQqIHXOeVH3qWGJ7UIrl4ywatCmOw2MUn0-QUx_mLLA1ydUyYIQy1KpOi_ZnsoBFvofVVnb-a8mGwvkKZPrpB2X3yq1kzD1rS5ioUuZhOKXyVwMHNlEptQOkOpQ6nWuPgAjKvuKi6QBPpScGK2oRr9Rlsyn-YL_6e19vkuqnj52_znmiCk1p_VjK0-TwSpCidXwBL6TKG1r2E52ACtOOC1BC9LNC"/><span class="font-headline-md text-headline-md text-primary tracking-tight">Hospelyra</span></a><nav class="hidden md:flex items-center gap-space-lg ml-space-md" data-active-classes="text-primary font-headline-sm"><a aria-current="page" class="transition-colors text-primary font-headline-sm" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="features" href="#">Features</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="faqs" href="#">FAQs</a></nav></div><div class="flex items-center gap-space-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary px-space-sm py-space-xs transition-colors" data-path="login" href="#">Sign In</a><a class="font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-md py-space-sm rounded-lg transition-all shadow-sm font-semibold" data-path="get-started" href="#">Get Started</a><div class="flex items-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer transition-transform hover:scale-105"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Field -->
+<div class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-background pb-space-xl">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-secondary-fixed-dim/20 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute top-48 right-10 w-[400px] h-[400px] bg-primary-fixed/25 blur-[100px] rounded-full pointer-events-none"></div>
+<!-- Hero Content Container -->
+<div class="max-w-[1400px] mx-auto px-margin pt-space-xl md:pt-24 flex flex-col items-center text-center relative z-10">
+<!-- Overline Pill Tag -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-highest px-space-md py-1 rounded-full shadow-sm mb-space-lg">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary tracking-wide uppercase">Unified Hospital Operating System</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">v4.8 HIPAA &amp; HL7 Certified</span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-display-lg text-display-lg md:text-[54px] md:leading-[62px] text-on-surface max-w-4xl tracking-tight">
+        Modern Operating System for <span class="text-primary underline decoration-secondary-container decoration-wavy decoration-2 underline-offset-8">High-Performing</span> Hospitals
+      </h1>
+<!-- Hero Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-md">
+        Unify inpatient workflows, clinical staffing, bed occupancy, and patient scheduling in a single HIPAA-compliant platform designed for modern healthcare teams.
+      </p>
+<!-- Primary & Secondary Actions -->
+<div class="flex flex-col sm:flex-row items-center gap-space-md mt-space-xl">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-space-lg py-3 rounded-lg font-headline-sm text-headline-sm shadow-md transition-all duration-200" href="#request-demo">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+          Request Hospital Demo
+        </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest hover:bg-surface-container-low text-on-surface px-space-lg py-3 rounded-lg font-headline-sm text-headline-sm shadow-sm transition-all duration-200" href="#dashboard-preview">
+<span class="material-symbols-outlined text-primary text-[20px]">play_circle</span>
+          Explore Platform Tour
+        </a>
+</div>
+<!-- Trust Bar -->
+<div class="mt-space-xl pt-space-lg flex flex-col items-center gap-space-md w-full max-w-3xl">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+          Trusted by over 140+ medical centers, regional clinics, and healthcare networks nationwide
+        </p>
+<div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-75">
+<div class="flex items-center gap-2 text-on-surface-variant font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary">local_hospital</span>
+<span>AuraHealth Metro</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary">health_and_safety</span>
+<span>Providence Valley</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary">medical_services</span>
+<span>Apex Medical Net</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary">emergency</span>
+<span>Northwest Health</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Realistic Hospital Dashboard Visual Preview -->
+<div class="max-w-[1400px] mx-auto px-margin mt-12 relative z-20" id="dashboard-preview">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden p-space-md md:p-space-lg">
+<!-- Dashboard Top Control Header -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[24px]">corporate_fare</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Central Campus Clinical Command Center</h3>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> Live Sync
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Saint Jude Academic Medical Pavilion • Ward Tower A, B &amp; Trauma Wing</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-stretch md:self-auto">
+<div class="bg-surface-container-low px-space-md py-1.5 rounded-lg flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<span>Shift 02: 14:00 - 22:00 EST</span>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md px-space-md py-2 rounded-lg flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span> Filter Unit
+            </button>
+</div>
+</div>
+<!-- KPI Stat Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-md">
+<!-- Stat 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Active Inpatients</span>
+<span class="w-7 h-7 rounded-md bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">hotel</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-tabular-nums">412</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">88% Bed Capacity</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">48 Beds Available</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Surgeries Today</span>
+<span class="w-7 h-7 rounded-md bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">surgical</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-tabular-nums">28 Scheduled</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">19 Completed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 In Theatre</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">On-Duty Clinical Staff</span>
+<span class="w-7 h-7 rounded-md bg-surface-variant text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">group</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-tabular-nums">164 Active</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">42 Physicians</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">122 RN / Specialists</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 95%"></div>
+</div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Average ER Triage</span>
+<span class="w-7 h-7 rounded-md bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-tabular-nums">14 mins</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">-4.2 mins vs benchmark</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Category 1-3</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 35%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Deep Operational Preview: Census & Admission Queue -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mt-space-md">
+<!-- Department Utilization Grid (7 Columns) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Department Census &amp; Capacity Utilization</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time telemetry across primary units</p>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-lowest px-2.5 py-1 rounded-md shadow-sm">Updated 2m ago</span>
+</div>
+<!-- Department Rows -->
+<div class="flex flex-col gap-space-sm mt-space-sm">
+<!-- Emergency -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-[140px]">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-label-md text-label-md text-on-surface">Emergency Dept</span>
+</div>
+<div class="flex-1 mx-2">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant mb-1">
+<span>42/45 Beds Occupied</span>
+<span class="font-tabular-nums text-on-surface font-semibold">93%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 93%"></div>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded">High Load</span>
+</div>
+<!-- Cardiology -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-[140px]">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface">Cardiology Wing</span>
+</div>
+<div class="flex-1 mx-2">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant mb-1">
+<span>78/90 Beds Occupied</span>
+<span class="font-tabular-nums text-on-surface font-semibold">86%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 86%"></div>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded">Optimal</span>
+</div>
+<!-- Pediatrics -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-[140px]">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Pediatrics Care</span>
+</div>
+<div class="flex-1 mx-2">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant mb-1">
+<span>34/50 Beds Occupied</span>
+<span class="font-tabular-nums text-on-surface font-semibold">68%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">Moderate</span>
+</div>
+<!-- ICU -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-[140px]">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Intensive Care (ICU)</span>
+</div>
+<div class="flex-1 mx-2">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant mb-1">
+<span>22/24 Beds Occupied</span>
+<span class="font-tabular-nums text-on-surface font-semibold">91%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 91%"></div>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded">Critical</span>
+</div>
+</div>
+</div>
+<!-- Mini Vitals spark bar -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">vital_signs</span> Central Telemetry Feed Online</span>
+<span class="font-tabular-nums">Aggregate SpO2 Mean: 97.8% • HR Mean: 74 bpm</span>
+</div>
+</div>
+<!-- Quick Patient Admission Queue (5 Columns) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Patient Flow Queue</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Incoming, admitted, and departing cases</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">more_horiz</span>
+</div>
+<!-- Queue List -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<!-- Patient 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary font-headline-sm text-headline-sm flex items-center justify-center">
+                      EL
+                    </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Elena Lewis</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Bed 304-B • Dr. Morrison</div>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-1 rounded-full font-medium">
+                    Admitted
+                  </span>
+</div>
+<!-- Patient 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary font-headline-sm text-headline-sm flex items-center justify-center">
+                      MR
+                    </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Marcus Vance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">ER Bay 04 • Dr. Chen</div>
+</div>
+</div>
+<span class="bg-surface-variant text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-full font-medium">
+                    In Triage
+                  </span>
+</div>
+<!-- Patient 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary font-headline-sm text-headline-sm flex items-center justify-center">
+                      SK
+                    </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Sarah Kowalski</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Cardio Post-Op • Dr. Reynolds</div>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2 py-1 rounded-full font-medium">
+                    Discharge Ready
+                  </span>
+</div>
+<!-- Patient 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary font-headline-sm text-headline-sm flex items-center justify-center">
+                      JT
+                    </div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Jonathan Torres</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">ICU Suite 02 • Dr. Thorne</div>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-1 rounded-full font-medium">
+                    Admitted
+                  </span>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-2 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center gap-1">
+              View Complete Inpatient Roster (412) <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Section Divider -->
+<div class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1400px] mx-auto px-margin">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-center">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Strict HIPAA &amp; SOC2</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">End-to-end encrypted clinical ledger with immutable audit tracing.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">integration_instructions</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">HL7 &amp; FHIR Ready</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bi-directional legacy sync with Epic, Cerner, and Meditech.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Sub-Second Telemetry</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant bed status, triage escalations, and automated pharmacy orders.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Features Section -->
+<section class="max-w-[1400px] mx-auto px-margin py-24 w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">Engineered For Zero Friction</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-space-xs">
+          Comprehensive Clinical Command
+        </h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+        Designed from the floor up with nurse managers, chief medical officers, and hospital IT directors to remove bureaucratic delay.
+      </p>
+</div>
+<!-- 4 Comprehensive Feature Cards (Bento style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card 1: Patient Management -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">person_heart</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Clinical Lifecycle</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">Patient Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+            Comprehensive EHR timeline, bed allocation, digital charts, and seamless intake-to-discharge tracking. Consolidates diagnostic reports, vital sign telemetry, and dietary restrictions into an intuitive split-pane canvas.
+          </p>
+<div class="mt-space-md bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-md">
+<img class="w-20 h-20 rounded-md object-cover shadow-sm" data-alt="A clean modern medical chart tablet mockup in teal lighting showing patient EHR timeline with heart rhythm telemetry and medication history" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLJkwcXqLlV8COIo7SHOmz7w3d1gXQVSHuc0uYsE2p_R-olbEhmMXW7vJwUqS9torv6hb1hqj3Q4N4W4XiGqHnQ1fK202cYbNT3Tk9ocKMBQZ9vjyNg4cDNW5G-cgNC_A3TdwnB1NerIh5hCo0a56OBFka87R_A7Oy0gQFETWPhoCWVOAc_pXqp0IuKSE9b3B2laHueZuTbUzg2dh-_ehX2gNwFp8HM1XYSOVZTDqDDlzBBd72rm-Wg"/>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Real-Time Bed Telemetry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant status changes: Cleaning Needed, Occupied, Reserved.</span>
+</div>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs mt-space-md pt-space-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            HL7 CCDA and Fast Healthcare Interoperability Resources (FHIR) sync
+          </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            Allergy alerts &amp; drug-interaction safeguards
+          </li>
+</ul>
+</div>
+<!-- Card 2: Doctor & Staff Management -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">badge</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Workforce Coordination</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">Doctor &amp; Staff Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+            Shift rosters, on-call paging schedules, credential verification, and clinical team load-balancing. Algorithmic staffing distributes nursing assignments based on acuity score rather than raw patient headcounts.
+          </p>
+<div class="mt-space-md bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-md">
+<img class="w-20 h-20 rounded-md object-cover shadow-sm" data-alt="Healthcare clinical director reviewing doctor shift roster on desktop display with teal UI in bright hospital office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzD2Zw7mmzfouLYbN_KLKWZdr5H3xOonW-KtrSse8y9noFcO0HsFci8Qj0vvUqv2Lj4CL-H7nynetGtZQ6olhAJnS7tealaIIiSRlj-ETeMAC3ywKeHyiWKq9ntsHioCus2qfjoSu8nuI7uvQH6YFMEWZ6wjr1pnHGR8_SNob9vnG7IZGlaN6TSl44vWMtjRk8QU3ZMrRwDbC_McnaCrUdfZLJcPK0kNTtYe2W86tUUGNVryz36nQyTQ"/>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Fatigue &amp; Overtime Prevention</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated compliance checks against maximum consecutive shift regulations.</span>
+</div>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs mt-space-md pt-space-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            Dynamic on-call paging with instant SMS fallback
+          </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            Automated CME accreditation and licensing renewal tracking
+          </li>
+</ul>
+</div>
+<!-- Card 3: Appointment & OR Scheduling -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">calendar_view_week</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Resource Optimization</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">Appointment &amp; OR Scheduling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+            Real-time OPD slots, surgical theatre reservations, automated patient SMS reminders, and zero double-booking. Includes surgical prep buffers, sterilization cooldown times, and equipment checklist validation.
+          </p>
+<div class="mt-space-md bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-md">
+<img class="w-20 h-20 rounded-md object-cover shadow-sm" data-alt="Clean hospital operating room with modern teal digital displays showing surgical suite schedule and preparation checklist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUPtaI00t_f2zkvazT_6OzFzfy4i71qVdVkWFDQ2Mg4tiFPN2H_KoiUL61BebljWIwkXHm6qRarTeGdCsG-nS3-GyQVjGJFkPLgC2PFNtSpemgXNUVZOdmNbpNX1Aw2ExMTEEu5v8j_x6qpzQz9BpeNU987ZkD3k3DuGzUOaQ-QL28vTJS6wmz5vFUMxZ0UxrrQLzPqIdoWA_xDpyCnZUTsybEIVQ510h2oYAumwwU1S1RcvpDMhCmww"/>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">OR Turnaround Optimization</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Reduces between-case lag by 22% via real-time housekeeping notifications.</span>
+</div>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs mt-space-md pt-space-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            Multi-clinic outpatient self-scheduling portal
+          </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            Automated two-way SMS confirmation &amp; pre-op intake forms
+          </li>
+</ul>
+</div>
+<!-- Card 4: Hospital Operations & Billing -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">account_balance_wallet</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Fiscal &amp; Supply Resilience</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">Hospital Operations &amp; Billing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+            Pharmacy inventory sync, medical equipment maintenance logs, automated insurance claims, and real-time bed telemetry. Bridges medical supply levels directly to patient administration for seamless charge capture.
+          </p>
+<div class="mt-space-md bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-md">
+<div class="w-20 h-20 rounded-md bg-surface-container flex flex-col items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">medication</span>
+<span class="font-label-sm text-label-sm mt-1">Auto-Dispense</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Automated Claim Adjudication</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant validation against ANSI 837P standards with clean claim rates over 98.4%.</span>
+</div>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs mt-space-md pt-space-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            Direct wholesale distributor EDI integrations (McKesson, Cardinal Health)
+          </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+            Automated biomedical device preventive maintenance alerting
+          </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="bg-surface-container-low py-24 w-full">
+<div class="max-w-[1400px] mx-auto px-margin">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">Predictable Implementation</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-space-xs">
+          Live Clinical Deployment in 3 Steps
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Transition seamlessly without disrupting emergency admissions or scheduled surgical blocks.
+        </p>
+</div>
+<!-- 3 Steps Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">01</span>
+<span class="w-10 h-10 rounded-full bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">cable</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Connect &amp; Configure</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+              Integrate with existing hospital EHR/HL7 systems or start fresh within hours. Our HIPAA-certified engineers map your clinical nomenclature, ward blueprints, and billing schemas securely.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">timer</span> Average Setup: Under 48 Hours
+            </span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">02</span>
+<span class="w-10 h-10 rounded-full bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">clinical_notes</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Onboard Departments</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+              Empower doctors, triage nurses, and administrative teams with role-based access. Tailored clinical views adapt to individual specialties without cognitive clutter.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">school</span> Micro-Learning Modules Included
+            </span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">03</span>
+<span class="w-10 h-10 rounded-full bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Optimize Care Delivery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+              Monitor live operational dashboards, eliminate bottlenecks, and elevate patient outcomes. Automatic telemetry spots bed turnover delays and supplies depletion before they escalate.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> Continuous Operational Uplift
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Subscription Plans / Transparent Pricing -->
+<section class="max-w-[1400px] mx-auto px-margin py-24 w-full">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">Predictable Investment</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mt-space-xs">
+        Transparent Pricing for Healthcare Networks
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+        Scale from specialized community clinics to massive multi-pavilion medical centers with complete pricing clarity.
+      </p>
+</div>
+<!-- 3 Pricing Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch">
+<!-- Tier 1: Clinic Tier -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Clinic Tier</h3>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full">Specialist Clinics</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Ideal for outpatient centers, surgical suites, and specialized clinics.</p>
+<div class="mt-space-lg flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-on-surface font-tabular-nums">$499</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ month billed annually</span>
+</div>
+<div class="mt-space-lg pt-space-md flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Included Capabilities:</span>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Up to 25 Monitored Beds
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                15 Clinical &amp; Staff Accounts
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Core OPD Scheduling &amp; Reminders
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Electronic Health Records (EHR Lite)
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                HIPAA Compliant Cloud Storage
+              </li>
+</ul>
+</div>
+</div>
+<div class="mt-space-xl">
+<button class="w-full py-3 bg-surface-container hover:bg-surface-container-high text-primary font-headline-sm text-headline-sm rounded-lg transition-colors">
+            Select Clinic Tier
+          </button>
+</div>
+</div>
+<!-- Tier 2: Hospital Standard (Most Popular) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between relative transform lg:-translate-y-2">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-on-primary font-label-sm text-label-sm font-semibold uppercase px-3 py-1 rounded-full shadow-sm tracking-wide">
+          Most Popular Choice
+        </div>
+<div>
+<div class="flex justify-between items-center mt-2">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Hospital Standard</h3>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full font-medium">Regional Center</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Comprehensive suite for community, county, and regional medical facilities.</p>
+<div class="mt-space-lg flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary font-tabular-nums">$1,499</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ month billed annually</span>
+</div>
+<div class="mt-space-lg pt-space-md flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Everything in Clinic, plus:</span>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<strong>Up to 150 Inpatient Beds</strong>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<strong>Unlimited Clinical Staff Accounts</strong>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Operating Room (OR) Suite Scheduling
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Pharmacy &amp; Formulary Integration
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Automated Insurance Claims Adjudication
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                24/7 Dedicated Clinical Response Desk
+              </li>
+</ul>
+</div>
+</div>
+<div class="mt-space-xl">
+<button class="w-full py-3 bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-headline-sm text-headline-sm rounded-lg shadow-md transition-colors">
+            Start 30-Day Free Trial
+          </button>
+</div>
+</div>
+<!-- Tier 3: Enterprise Health System -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Enterprise System</h3>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full">Multi-Campus</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Bespoke infrastructure for multi-campus hospital trusts and university networks.</p>
+<div class="mt-space-lg flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-on-surface">Custom</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tailored institutional SLA</span>
+</div>
+<div class="mt-space-lg pt-space-md flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Enterprise Architecture:</span>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Unlimited Campus &amp; Bed Capacity
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Custom HL7 / FHIR / Epic Interface Engines
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                On-Premises or Private GovCloud Hosting
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                Dedicated Clinical Transformation Director
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                99.999% High-Availability Uptime SLA
+              </li>
+</ul>
+</div>
+</div>
+<div class="mt-space-xl">
+<button class="w-full py-3 bg-surface-container hover:bg-surface-container-high text-primary font-headline-sm text-headline-sm rounded-lg transition-colors">
+            Contact Enterprise Sales
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call-to-Action Section -->
+<section class="max-w-[1400px] mx-auto px-margin pb-24 w-full" id="request-demo">
+<div class="relative bg-gradient-to-br from-primary-container via-primary to-tertiary rounded-xl p-space-lg md:p-16 text-on-primary overflow-hidden shadow-xl">
+<!-- Decorative radial highlights contained in section -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-16 -top-16 w-80 h-80 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary-container font-semibold">Immediate Clinical Transformation</span>
+<h2 class="font-display-lg text-display-lg text-on-primary mt-space-xs">
+          Ready to Transform Your Hospital Operations?
+        </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-xl mt-space-md">
+          Join over 140 leading healthcare facilities that reduced administrative burden by 40% and improved bed utilization within 60 days.
+        </p>
+<!-- Booking Form Input Pill -->
+<div class="mt-space-xl flex flex-col sm:flex-row items-center gap-space-sm max-w-lg">
+<input class="w-full px-space-md py-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none shadow-sm" placeholder="Enter chief medical or director email" type="email"/>
+<button class="w-full sm:w-auto whitespace-nowrap bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-headline-sm text-headline-sm px-space-lg py-3.5 rounded-lg transition-all shadow-md">
+            Schedule Briefing
+          </button>
+</div>
+<!-- Compliance & SLA Badges -->
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center gap-6 text-on-primary-container font-body-sm text-body-sm opacity-90">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>HIPAA BAA Agreement Ready</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">security</span>
+<span>ISO 27001 &amp; SOC2 Type II Certified</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>Live 1-on-1 CMO Consultation</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface"><div class="max-w-[1600px] mx-auto px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-xl pb-space-xl border-b border-outline-variant/20"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Hospelyra Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vpt5HlLVbYEc-A-03DCbAw0w4itnVBsQqIHXOeVH3qWGJ7UIrl4ywatCmOw2MUn0-QUx_mLLA1ydUyYIQy1KpOi_ZnsoBFvofVVnb-a8mGwvkKZPrpB2X3yq1kzD1rS5ioUuZhOKXyVwMHNlEptQOkOpQ6nWuPgAjKvuKi6QBPpScGK2oRr9Rlsyn-YL_6e19vkuqnj52_znmiCk1p_VjK0-TwSpCidXwBL6TKG1r2E52ACtOOC1BC9LNC"/><span class="font-headline-md text-headline-md text-primary">Hospelyra</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Unified clinical management, bed tracking, and electronic health record coordination built for modern enterprise hospitals and regional health systems.</p><div class="flex flex-col gap-space-xs pt-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Hospital Support Contact</span><a class="font-label-md text-label-md text-primary hover:underline" href="mailto:support@hospelyra.health">support@hospelyra.health</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Product</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Features</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Dashboard</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Security</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Pricing</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Hospital Solutions</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Inpatient</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Outpatient</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Clinical Staff</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Bed Management</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Resources</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Documentation</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">FAQs</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Support</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Compliance &amp; HIPAA</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Company</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">About Us</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Contact</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Privacy</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary cursor-pointer">Terms</li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col sm:flex-row items-center gap-space-sm w-full md:w-auto"><span class="font-label-md text-label-md text-on-surface font-medium whitespace-nowrap">Subscribe to Clinical Updates</span><div class="flex items-center gap-space-xs w-full sm:w-auto"><input class="bg-surface-container-low border border-outline-variant/60 rounded-lg px-space-md py-space-xs font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full sm:w-64" placeholder="director@hospital.org" type="email"/><button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md px-space-md py-space-xs rounded-lg transition-colors whitespace-nowrap">Join</button></div></div><p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right">© 2025 Hospelyra Inc. All rights reserved. HIPAA Compliant.</p></div></div></footer></body></html>
