@@ -46,3 +46,17 @@ Tailwind CSS IntelliSense
 -----------
 
 التعامل مع githup :
+
+اول مره خالص ، بتنزل المشروع عندك
+git clone REPOSITORY_URL
+git switch BRANCH_NAME
+
+بعد كده لو عاوز تحدث الشغل اللي عندك لاخر نسخه موجوده علي جيت هاب
+git switch BRANCH_NAME
+git pull
+
+لو خلصت كود وعاوز ترفع شغلك علي جيت هاب
+git add .
+git commit -m "comment"
+git push
+
