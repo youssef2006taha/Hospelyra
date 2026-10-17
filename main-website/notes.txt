@@ -1,0 +1,48 @@
+rfce
+-----------
+
+npm run dev
+-----------
+
+.jsx => فايل بتكتب فيه js و html
+-----------
+
+التسميه في رياكت
+  في العادي => Camel Case          youssefTaha
+  في كمبونانت => Pascal Case       YoussefTaha
+-----------
+
+في رياكت class = className
+-----------
+
+return (
+ <تاج واحد بس>
+)
+-----------
+
+لو عاوز تعمل variables او function جوا كود html بتحطه جوا {}
+
+-----------
+
+الربط
+ import HeroSection from "./sections/HeroSection"
+ <HeroSection />
+
+-----------
+
+<section className='py-section-padding'>
+  <div className='cotainer'>
+
+  {/* code */}
+
+  </div>
+</section>
+
+-----------
+
+ES7+ React/Redux/React-Native snippets
+Tailwind CSS IntelliSense
+
+-----------
+
+التعامل مع githup :

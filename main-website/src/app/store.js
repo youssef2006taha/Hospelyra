@@ -1,8 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
-import appReducer from '../features/app/appSlice.js'
+import { configureStore } from '@reduxjs/toolkit';
+import langReducer from '../features/app/lang/langSlice.js';
+import uiReducer from '../features/app/ui/uiSlice.js';
+import toastReducer from '../features/app/ui/toast/toastSlice.js';
 
 export const store = configureStore({
   reducer: {
-    app: appReducer,
+    ui: uiReducer,
+    lang: langReducer,
+    toast: toastReducer,
   },
-})
+});

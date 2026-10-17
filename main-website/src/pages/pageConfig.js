@@ -4,4 +4,4 @@ export const pages = [
   { path: 'login', title: 'Login' },
   { path: 'register', title: 'Register' },
   { path: 'forgot-password', title: 'Forgot Password' },
-]
+];
