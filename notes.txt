@@ -1,0 +1,62 @@
+rfce
+-----------
+
+npm run dev
+-----------
+
+.jsx => فايل بتكتب فيه js و html
+-----------
+
+التسميه في رياكت
+  في العادي => Camel Case          youssefTaha
+  في كمبونانت => Pascal Case       YoussefTaha
+-----------
+
+في رياكت class = className
+-----------
+
+return (
+ <تاج واحد بس>
+)
+-----------
+
+لو عاوز تعمل variables او function جوا كود html بتحطه جوا {}
+
+-----------
+
+الربط
+ import HeroSection from "./sections/HeroSection"
+ <HeroSection />
+
+-----------
+
+<section className='py-section-padding'>
+  <div className='cotainer'>
+
+  {/* code */}
+
+  </div>
+</section>
+
+-----------
+
+ES7+ React/Redux/React-Native snippets
+Tailwind CSS IntelliSense
+
+-----------
+
+التعامل مع githup :
+
+اول مره خالص ، بتنزل المشروع عندك
+git clone REPOSITORY_URL
+git switch BRANCH_NAME
+
+بعد كده لو عاوز تحدث الشغل اللي عندك لاخر نسخه موجوده علي جيت هاب
+git switch BRANCH_NAME
+git pull
+
+لو خلصت كود وعاوز ترفع شغلك علي جيت هاب
+git add .
+git commit -m "comment"
+git push
+
