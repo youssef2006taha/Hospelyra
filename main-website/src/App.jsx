@@ -9,6 +9,7 @@ import FAQs from './pages/faqs/FAQs.jsx';
 import Login from './pages/login/Login.jsx';
 import Register from './pages/register/Register.jsx';
 import ForgotPassword from './pages/forgot-password/ForgotPassword.jsx';
+import Profile from './pages/profile/Profile.jsx';
 
 function App() {
   const theme = useSelector((state) => state.ui.theme);
@@ -30,6 +31,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="*" element={<Navigate to="/home" replace />} />
         </Route>
       </Routes>
