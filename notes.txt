@@ -45,18 +45,30 @@ Tailwind CSS IntelliSense
 
 -----------
 
-التعامل مع githup :
+الأوامر اللي هتحتاجها :
 
 اول مره خالص ، بتنزل المشروع عندك
 git clone REPOSITORY_URL
-git switch BRANCH_NAME
+git switch your-pransh
+بعد كده تخش ملف الموقع اللي هتشتغل عليه والي فيه ملف ال App.jsx وتكتب npm install
+
+###
 
 بعد كده لو عاوز تحدث الشغل اللي عندك لاخر نسخه موجوده علي جيت هاب
-git switch BRANCH_NAME
+git switch BRANCH_NAME   هنا انا هتكتب اسم البرانش اللي عاوز تنزل منه اخر تحديث ، وغالبا هيكون البرانش الاساسي اللي اسمه main
 git pull
 
+###
+
 لو خلصت كود وعاوز ترفع شغلك علي جيت هاب
+git switch your-pransh
 git add .
 git commit -m "comment"
 git push
+بعد كده هتروح علي جيت هب وتعمل create pull request من الزر الخضر
 
+###
+
+لو حصل معاك مشكله بسبب أسماء الملفات الطويله 
+استعمل الامر دا
+git config --global core.longpaths true
