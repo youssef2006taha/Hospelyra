@@ -8,30 +8,20 @@ import {
   toggleTheme,
 } from '../../features/app/ui/uiSlice.js';
 import { toggleLanguage } from '../../features/app/lang/langSlice.js';
-import { navLinks } from './Navs.js';
+import person from "../../assets/mem.png"
 
-const navLabels = {
-  en: {
-    brand: 'Hospelyra',
-    menu: 'Open navigation menu',
-    closeMenu: 'Close navigation menu',
-    theme: 'Switch color theme',
-    language: 'العربية',
-  },
-  ar: {
-    brand: 'هوسبيليرا',
-    menu: 'فتح قائمة التنقل',
-    closeMenu: 'إغلاق قائمة التنقل',
-    theme: 'تغيير المظهر',
-    language: 'English',
-  },
-};
-
-export default function Navbar() {
+export default function Navbar({ data , navLinks }) {
   const dispatch = useDispatch();
   const { isMobileMenuOpen, theme } = useSelector((state) => state.ui);
-  const { current: language } = useSelector((state) => state.lang);
-  const labels = navLabels[language];
+
+  // navs
+  const navs = navLinks.filter((el) => ["home", "faqs", "contact"].includes(el.path))
+  const profileNav = navLinks.filter((el) => el.path === "profile")[0]
+  const loginNav = navLinks.filter((el) => el.path === "login")[0]
+  const registerNav = navLinks.filter((el) => el.path === "register")[0]
+
+
+
 
   useEffect(() => {
     const closeMenuOnResize = () => dispatch(closeMobileMenu());
@@ -54,57 +44,81 @@ export default function Navbar() {
         <Link
           className="shrink-0 text-xl font-extrabold tracking-tight text-primary sm:text-2xl"
           to="/home"
-          aria-label={labels.brand}
         >
-          {labels.brand}
+          {data.brand}
         </Link>
 
-        <nav aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'} className="hidden items-center gap-1 lg:flex">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={`/${link.path}`}
-              className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                isActive
-                  ? 'bg-primary-light text-primary'
-                  : 'text-text-muted hover:bg-bg-secondary hover:text-primary'
-              }`}
-            >
-              {link.label[language]}
-            </NavLink>
-          ))}
+        <nav className="hidden items-center gap-1 lg:flex">
+          {navs.map(
+              (link) => (
+                <NavLink
+                  key={link.path}
+                  to={`/${link.path}`}
+                  className={({ isActive }) => `rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'bg-primary-light text-primary'
+                      : 'text-text-muted hover:bg-bg-secondary hover:text-primary'
+                  }`}
+                >
+                  {link.label}
+                </NavLink>
+              )
+            )
+          }
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
           <button
             type="button"
             onClick={() => dispatch(toggleTheme())}
-            className="rounded-xl border border-text-light/15 bg-bg-secondary p-2 text-primary transition-colors hover:bg-primary-light"
-            aria-label={labels.theme}
-            title={labels.theme}
+            className="cursor-pointer size-8 flex justify-center items-center rounded-xl border border-text-light/15 bg-bg-secondary text-primary transition-colors hover:bg-primary-light"
           >
-            {theme === 'dark' ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
           <button
             type="button"
             onClick={() => dispatch(toggleLanguage())}
-            className="flex items-center gap-2 rounded-xl bg-primary-light px-3 py-2 text-xs font-semibold text-primary transition-colors hover:bg-primary/20 sm:text-sm"
-            aria-label={labels.language}
+            className="cursor-pointer h-8 flex justify-center items-center gap-1 px-2 rounded-xl bg-primary-light text-xs font-semibold text-primary transition-colors hover:bg-primary/20 sm:text-sm"
           >
-            <Globe size={16} aria-hidden="true" />
-            <span>{labels.language}</span>
+            <Globe size={16} />
+            <span>{data.language}</span>
           </button>
+
+          <NavLink
+            key={profileNav.path}
+            to={`/${profileNav.path}`}
+            className="rounded-full size-9"
+            style={{
+              backgroundImage: `url(${person})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover"
+            }}
+          >
+          </NavLink>
+
+          <NavLink
+            key={loginNav.path}
+            to={`/${loginNav.path}`}
+            className="h-9 flex justify-center items-center px-2 rounded-xl bg-primary text-text-inverse transition-colors hover:bg-primary-hover"
+          >
+            {loginNav.label}
+          </NavLink>
+          
+          <NavLink
+            key={registerNav.path}
+            to={`/${registerNav.path}`}
+            className="h-9 flex justify-center items-center px-2 rounded-xl bg-primary text-text-inverse transition-colors hover:bg-primary-hover"
+          >
+            {registerNav.label}
+          </NavLink>
 
           <button
             type="button"
             onClick={() => dispatch(toggleMobileMenu())}
-            className="rounded-xl bg-primary p-2 text-text-inverse transition-colors hover:bg-primary-hover lg:hidden"
-            aria-label={isMobileMenuOpen ? labels.closeMenu : labels.menu}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-navigation"
+            className="cursor-pointer size-9 flex justify-center items-center rounded-xl bg-primary text-text-inverse transition-colors hover:bg-primary-hover lg:hidden"
           >
-            {isMobileMenuOpen ? <X size={21} aria-hidden="true" /> : <Menu size={21} aria-hidden="true" />}
+            {isMobileMenuOpen ? <X size={21} /> : <Menu size={23} />}
           </button>
         </div>
       </div>
@@ -113,13 +127,9 @@ export default function Navbar() {
         className={`fixed inset-0 top-20 z-40 bg-text-main/20 backdrop-blur-sm transition-opacity lg:hidden ${
           isMobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
-        aria-hidden="true"
         onClick={() => dispatch(closeMobileMenu())}
       />
       <nav
-        id="mobile-navigation"
-        aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}
-        aria-hidden={!isMobileMenuOpen}
         inert={!isMobileMenuOpen}
         className={`absolute inset-x-0 top-full z-50 overflow-hidden border-b border-text-light/10 bg-bg-main shadow-xl transition-[max-height,opacity] duration-300 lg:hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
@@ -137,7 +147,7 @@ export default function Navbar() {
                   : 'text-text-muted hover:bg-bg-secondary hover:text-primary'
               }`}
             >
-              {link.label[language]}
+              {link.label}
             </NavLink>
           ))}
         </div>

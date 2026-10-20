@@ -1,3 +1,9 @@
-export default function Login() {
-  return null;
+import React from 'react'
+
+function Login() {
+  return (
+    <div>Login</div>
+  )
 }
+
+export default Login
