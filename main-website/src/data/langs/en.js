@@ -28,5 +28,9 @@ export const en = {
       copyright: 'All rights reserved.',
       statement: "Your care, made simpler."
     },
+
+    contact : {
+
+    },
   }
 };

@@ -28,5 +28,9 @@ export const ar = {
       copyright: 'جميع الحقوق محفوظة.',
       statement: "رعايتك، بطريقة أفضل."
     },
+
+    contact : {
+
+    },
   }
 };
