@@ -1,12 +1,17 @@
-import React from 'react'
+import CtaSection from "./sections/CtaSection"
+import FeaturesSections from "./sections/FeaturesSections"
 import HeroSection from "./sections/HeroSection"
-import Section1 from "./sections/Section1"
+import PlansSection from "./sections/PlansSection"
+import PreviewSection from "./sections/PreviewSection"
 
-function Home() {
+function Home({data}) {
   return (
     <div>
-      <HeroSection />
-      <Section1 />
+      <HeroSection data={data.hero} />
+      <FeaturesSections data={data.features}/>
+      <PreviewSection data={data.preview}/>
+      <PlansSection data={data.plans}/>
+      <CtaSection data={data.cta}/>
     </div>
   )
 }

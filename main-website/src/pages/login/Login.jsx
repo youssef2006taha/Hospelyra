@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Login() {
+function Login({data}) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-bg-main text-text-main px-4 py-12 transition-colors duration-300">
       <div className="w-full max-w-md bg-bg-surface p-8 rounded-2xl shadow-xl border border-primary/20">
