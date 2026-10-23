@@ -54,9 +54,32 @@ export const ar = {
 
     forgetPassword : {},
 
-    login : {},
+    login : {
+      welcome:'مرحبا بعودتك الي Hospelyra',
+      login: 'تسجيل الدخول',
+      email: 'البريد الإلكتروني',
+      password: 'كلمة المرور',
+      register: 'إنشاء حساب جديد',
+      forgotPassword: 'نسيت كلمة المرور؟',
+      enter: 'دخول',
+      dontHaveAccount: 'ليس لديك حساب؟',
+      createAccount:'إنشاء حساب جديد',
+      
+    },
 
-    register : {},
+    register : {
+      createNewAccount:'إنشاء حساب جديد',
+      join:'انضم إلى هوسبيليرا وابدأ تجربتك اليوم',
+      email: 'البريد الإلكتروني',
+      password: 'كلمة المرور',
+      login: 'تسجيل الدخول',
+      fullName:'الاسم الكامل',
+      exmName: 'يوسف طه عبدالعزيز',
+      confirmPassword: 'تأكيد كلمة المرور',
+      createAccount: 'إنشاء الحساب',
+      haveAccount: 'لديك حساب بالفعل؟',
+
+    },
   },
 
   // pages
@@ -97,3 +120,4 @@ export const ar = {
     },
   }
 };
+
