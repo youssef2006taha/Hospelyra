@@ -1,4 +1,5 @@
 
+
 export const ar = {
   // layout
 
@@ -31,7 +32,7 @@ export const ar = {
       statement: "رعايتك، بطريقة أفضل."
     },
   },
-
+  
   // home
 
   home : {
