@@ -49,7 +49,7 @@ const qts = [
 ]
 
 
-function FAQs() {
+function FAQs({data}) {
   const [mainId , setMainId] = useState(0)
   const [subId , setSubId] = useState(0)
 
