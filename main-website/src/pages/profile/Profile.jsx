@@ -1,6 +1,6 @@
 import React from "react";
 
-function Profile() {
+function Profile({data}) {
   return (
     <section className="py-section-padding">
       <div className="container">

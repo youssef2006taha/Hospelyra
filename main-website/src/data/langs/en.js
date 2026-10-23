@@ -1,5 +1,7 @@
 
 export const en = {
+  // layout
+
   layout : {
     navLinks: [
       { path: 'home', label: 'Home' },
@@ -28,5 +30,45 @@ export const en = {
       copyright: 'All rights reserved.',
       statement: "Your care, made simpler."
     },
+  },
+
+  // home
+
+  home : {
+    hero : {},
+
+    features : {},
+
+    preview : {},
+
+    plans : {},
+
+    cta : {}
+  },
+
+  //  Auth
+
+  auth : {
+    sendOtp : {},
+
+    forgetPassword : {},
+
+    login : {},
+
+    register : {},
+  },
+
+  // pages
+
+  contact : {
+
+  },
+
+  faqs : {
+
+  },
+
+  profile : {
+
   }
 };

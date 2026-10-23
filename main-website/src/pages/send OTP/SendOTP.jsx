@@ -1,8 +1,8 @@
 import React from 'react'
 
-function SendOTP() {
+function SendOTP({data}) {
   return (
-    <div>SendOTP</div>
+    <div></div>
   )
 }
 

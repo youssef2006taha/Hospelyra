@@ -1,8 +1,8 @@
 import React from 'react'
 
-function ForgetPassword() {
+function ForgetPassword({data}) {
   return (
-    <div>ForgetPassword</div>
+    <div></div>
   )
 }
 
