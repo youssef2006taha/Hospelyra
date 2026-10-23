@@ -39,10 +39,10 @@ function App() {
           <Route path="contact" element={<Contact data={data.contact} />} />
           <Route path="profile" element={<Profile data={data.profile} />} />
 
-          <Route path="login" element={<Login data={data.login} />} />
-          <Route path="register" element={<Register data={data.register} />} />
-          <Route path="forget-password" element={<ForgetPassword data={data.forgetPassword} />} />
-          <Route path="sendOTP" element={<SendOTP data={data.sendOtp} />} />
+          <Route path="login" element={<Login data={data.auth.login} />} />
+          <Route path="register" element={<Register data={data.auth.register} />} />
+          <Route path="forget-password" element={<ForgetPassword data={data.auth.forgetPassword} />} />
+          <Route path="sendOTP" element={<SendOTP data={data.auth.sendOtp} />} />
           <Route path="*" element={<Navigate to="/home" replace />} />
         </Route>
       </Routes>
