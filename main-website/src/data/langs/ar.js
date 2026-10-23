@@ -32,33 +32,7 @@ export const ar = {
       statement: "رعايتك، بطريقة أفضل."
     },
   },
-
-  profile : {
-    title: 'حسابك',
-    subtitle: 'إدارة معلوماتك وإعدادات حسابك',
-    back: 'العودة للرئيسية',
-    editProfile: 'تعديل الحساب',
-    user: {
-      name: 'يوسف شحاتة',
-      role: 'مستخدم',
-      email: 'youssef.shehata@example.com',
-      phone: '+20 123 456 7890',
-      location: 'منيا القمح، الشرقية',
-      birthDate: '12 مارس 2006',
-    },
-    details: {
-      fullName: 'الاسم بالكامل',
-      email: 'البريد الإلكتروني',
-      phone: 'رقم الهاتف',
-      location: 'الموقع',
-      birthDate: 'تاريخ الميلاد',
-    },
-    account: {
-      type: 'نوع الحساب',
-      role: 'الدور',
-      status: 'حالة الحساب',
-      active: 'نشط',
-    },
+  
   // home
 
   home : {
@@ -96,6 +70,30 @@ export const ar = {
   },
 
   profile : {
-    
+    title: 'حسابك',
+    subtitle: 'إدارة معلوماتك وإعدادات حسابك',
+    back: 'العودة للرئيسية',
+    editProfile: 'تعديل الحساب',
+    user: {
+      name: 'يوسف شحاتة',
+      role: 'مستخدم',
+      email: 'youssef.shehata@example.com',
+      phone: '+20 123 456 7890',
+      location: 'منيا القمح، الشرقية',
+      birthDate: '12 مارس 2006',
+    },
+    details: {
+      fullName: 'الاسم بالكامل',
+      email: 'البريد الإلكتروني',
+      phone: 'رقم الهاتف',
+      location: 'الموقع',
+      birthDate: 'تاريخ الميلاد',
+    },
+    account: {
+      type: 'نوع الحساب',
+      role: 'الدور',
+      status: 'حالة الحساب',
+      active: 'نشط',
+    },
   }
 };
