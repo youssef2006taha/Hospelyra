@@ -1,4 +1,5 @@
 
+
 export const en = {
   layout : {
     navLinks: [
@@ -27,6 +28,34 @@ export const en = {
       faq: 'Visit FAQs',
       copyright: 'All rights reserved.',
       statement: "Your care, made simpler."
+    },
+  },
+
+  profile : {
+    title: 'Profile',
+    subtitle: 'Manage your information and account settings',
+    back: 'Back to home',
+    editProfile: 'Edit Profile',
+    user: {
+      name: 'Youssef Shehata',
+      role: 'User',
+      email: 'youssef.shehata@example.com',
+      phone: '+20 123 456 7890',
+      location: 'Minya El Qamh, Sharqia',
+      birthDate: 'March 12, 2006',
+    },
+    details: {
+      fullName: 'Full Name',
+      email: 'Email',
+      phone: 'Phone',
+      location: 'Location',
+      birthDate: 'Date of Birth',
+    },
+    account: {
+      type: 'Account Type',
+      role: 'Role',
+      status: 'Account Status',
+      active: 'Active',
     },
   }
 };
