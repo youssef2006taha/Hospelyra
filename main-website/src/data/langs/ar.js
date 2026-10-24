@@ -63,7 +63,7 @@ export const ar = {
       forgotPassword: 'نسيت كلمة المرور؟',
       enter: 'دخول',
       dontHaveAccount: 'ليس لديك حساب؟',
-      createAccount:'إنشاء حساب جديد',
+      createNewAccount:'إنشاء حساب جديد',
       
     },
 

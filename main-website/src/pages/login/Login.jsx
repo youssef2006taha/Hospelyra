@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CustomInput from "../../components/ui/CustomInput"
 function Login({data}) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-bg-main text-text-main px-4 py-12 transition-colors duration-300">
@@ -11,7 +11,7 @@ function Login({data}) {
           </h1>
           <p className="text-sm font-medium text-text-muted">
           {data.welcome}
-          </p>
+          </p> 
         </div>
 
         <form className="space-y-5">
@@ -20,7 +20,7 @@ function Login({data}) {
             <label htmlFor="email" className="block text-sm font-bold text-text-muted mb-1.5">
             {data.email}  
             </label>
-            <input
+            <CustomInput   
               type="email"
               id="email"
               placeholder="name@example.com"
@@ -39,7 +39,7 @@ function Login({data}) {
               {data.forgotPassword}
               </a>
             </div>
-            <input
+            <CustomInput
               type="password"
               id="password"
               placeholder="••••••••"

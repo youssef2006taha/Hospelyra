@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomInput from '../../components/ui/CustomInput'
 
 function Register({data}) {
   return (
@@ -19,7 +20,7 @@ function Register({data}) {
             <label htmlFor="fullName" className="block text-sm font-bold text-text-muted mb-1.5">
             {data.fullName}
             </label>
-            <input
+            <CustomInput
               type="text"
               id="fullName"
               placeholder={data.exmName}
@@ -33,7 +34,7 @@ function Register({data}) {
             <label htmlFor="email" className="block text-sm font-bold text-text-muted mb-1.5">
             {data.email}
             </label>
-            <input
+            <CustomInput
               type="email"
               id="email"
               placeholder="name@example.com"
@@ -47,7 +48,7 @@ function Register({data}) {
             <label htmlFor="password" className="block text-sm font-bold text-text-muted mb-1.5">
             {data.password}
             </label>
-            <input
+            <CustomInput
               type="password"
               id="password"
               placeholder="••••••••"
@@ -61,7 +62,7 @@ function Register({data}) {
             <label htmlFor="confirmPassword" className="block text-sm font-bold text-text-muted mb-1.5">
             {data.confirmPassword}
             </label>
-            <input
+            <CustomInput
               type="password"
               id="confirmPassword"
               placeholder="••••••••"
