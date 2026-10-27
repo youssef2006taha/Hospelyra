@@ -54,9 +54,31 @@ export const en = {
 
     forgetPassword : {},
 
-    login : {},
+    login : {
+      welcome: 'Welcome back to Hospelyra',
+      login: 'Login',
+      email: 'Email',
+      password: 'Password',
+      register: 'Register',
+      forgotPassword: 'Forget Password?',
+      enter: 'Login',
+      dontHaveAccount: 'You do not have an account?',
+      createNewAccount:'create a new account',
+    },
 
-    register : {},
+    register : {
+      createNewAccount:'create a new account',
+      join: 'Join Hospelyra and start your experience today',
+      fullName: 'The full name',
+      exmName: 'Youssef Taha Abdulaziz',
+      email: 'Email',
+      password: 'Password',
+      confirmPassword: 'Confirm password',
+      createAccount: 'Create Account',
+      login: 'Login',
+      haveAccount: 'Already have an account?',
+
+    },
   },
 
   // pages
@@ -97,3 +119,4 @@ export const en = {
     },
   }
 };
+
