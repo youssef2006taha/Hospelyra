@@ -1,6 +1,8 @@
 
 
 export const en = {
+  // layout
+
   layout : {
     navLinks: [
       { path: 'home', label: 'Home' },
@@ -57,5 +59,43 @@ export const en = {
       status: 'Account Status',
       active: 'Active',
     },
+  // home
+
+  home : {
+    hero : {},
+
+    features : {},
+
+    preview : {},
+
+    plans : {},
+
+    cta : {}
+  },
+
+  //  Auth
+
+  auth : {
+    sendOtp : {},
+
+    forgetPassword : {},
+
+    login : {},
+
+    register : {},
+  },
+
+  // pages
+
+  contact : {
+
+  },
+
+  faqs : {
+
+  },
+
+  profile : {
+
   }
 };

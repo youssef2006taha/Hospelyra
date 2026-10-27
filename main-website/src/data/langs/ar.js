@@ -1,6 +1,8 @@
 
 
 export const ar = {
+  // layout
+
   layout : {
     navLinks: [
       { path: 'home', label: 'الرئيسية' },
@@ -57,5 +59,43 @@ export const ar = {
       status: 'حالة الحساب',
       active: 'نشط',
     },
+  // home
+
+  home : {
+    hero : {},
+
+    features : {},
+
+    preview : {},
+
+    plans : {},
+
+    cta : {}
+  },
+
+  //  Auth
+
+  auth : {
+    sendOtp : {},
+
+    forgetPassword : {},
+
+    login : {},
+
+    register : {},
+  },
+
+  // pages
+
+  contact : {
+
+  },
+
+  faqs : {
+
+  },
+
+  profile : {
+    
   }
 };

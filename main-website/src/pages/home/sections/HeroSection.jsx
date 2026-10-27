@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HeroSection() {
+function HeroSection({data}) {
   return (
     <section className='py-section-padding'>
       <div className='cotainer'>
