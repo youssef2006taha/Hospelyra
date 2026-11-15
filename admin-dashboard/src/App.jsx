@@ -11,51 +11,36 @@ import Plans from './pages/plans/Plans.jsx';
 import Settings from './pages/settings/Settings.jsx';
 import Profile from './pages/profile/Profile.jsx';
 import Login from './pages/auth/login/Login.jsx';
+import ForgotPassword from './pages/auth/forgotPassword/ForgotPassword.jsx';
 import SendOtp from './pages/auth/sendOtp/SendOtp.jsx';
+import ResetPassword from './pages/auth/resetPassword/ResetPassword.jsx';
 
 function App() {
   const theme = useSelector((state) => state.ui.theme);
-  const dir = useSelector((state) => state.lang.dir);
   const language = useSelector((state) => state.lang.current);
   const data = staticData[language];
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    document.documentElement.dir = dir;
-  }, [theme, dir]);
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
 
   return (
     <>
       <Routes>
         <Route path="/" element={<Navigate to="/overview" replace />} />
         <Route element={<AppLayout data={data.layout} />}>
-          <Route
-            path="overview"
-            element={<Overview staticData={data.pages.overview} />}
-          />
-          <Route
-            path="hospitals"
-            element={<Hospitals staticData={data.pages.hospitals} />}
-          />
-          <Route
-            path="plans"
-            element={<Plans staticData={data.pages.plans} />}
-          />
-          <Route
-            path="settings"
-            element={<Settings staticData={data.pages.settings} />}
-          />
-          <Route
-            path="profile"
-            element={<Profile staticData={data.pages.profile} />}
-          />
+          <Route path="overview" element={<Overview staticData={data.pages.overview} />} />
+          <Route path="hospitals" element={<Hospitals staticData={data.pages.hospitals} />} />
+          <Route path="plans" element={<Plans staticData={data.pages.plans} />} />
+          <Route path="settings" element={<Settings staticData={data.pages.settings} />} />
+          <Route path="profile" element={<Profile staticData={data.pages.profile} />} />
         </Route>
+
         <Route path="login" element={<Login staticData={data.pages.login} />} />
-        <Route
-          path="send-otp"
-          element={<SendOtp staticData={data.pages.sendOtp} />}
-        />
+        <Route path="forgot-password" element={<ForgotPassword staticData={data.pages.forgotPassword} />} />
+        <Route path="send-otp" element={<SendOtp staticData={data.pages.sendOtp} />} />
+        <Route path="reset-password" element={<ResetPassword staticData={data.pages.resetPassword} />} />
         <Route path="*" element={<Navigate to="/overview" replace />} />
       </Routes>
       <Toast />

@@ -1,53 +1,60 @@
-import React from 'react'
-
-function PlansSection({data}) {
+function PlansSection({ data }) {
   return (
-    <section className='py-section-padding bg-white'>
-      <div className='cotainer'>
-        
-        {/* عنوان القسم */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">باقات تناسب جميع العيادات</h2>
-          <div className="w-16 h-1 bg-sky-600 mx-auto rounded"></div>
+    <section className="bg-bg-secondary py-section-padding">
+      <div className="container">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">{data.eyebrow}</p>
+          <h2 className="mt-4 text-3xl font-black text-text-main md:text-4xl">{data.title}</h2>
         </div>
 
-        {/* كروت الخطط والباقات */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          
-          {/* الباقة الأولى */}
-          <div className="border border-slate-200 p-8 rounded-2xl flex flex-col justify-between">
-            <div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">باقة العيادات الصغيرة</h3>
-              <p className="text-slate-500 mb-6">مناسبة للعيادات الفردية والأطباء المستقلين.</p>
-              <div className="text-4xl font-extrabold text-slate-900 mb-6">
-                999 ج.م <span className="text-sm font-normal text-slate-500">/ شهرياً</span>
-              </div>
-            </div>
-            <button className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-3 rounded-lg transition duration-200">
-              اشترك الآن
-            </button>
-          </div>
+        <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+          {data.items.map((plan) => (
+            <div
+              key={plan.name}
+              className={`relative rounded-[28px] border p-8 transition hover:-translate-y-1 hover:shadow-xl ${
+                plan.featured
+                  ? 'border-primary bg-primary-light shadow-[0_30px_80px_rgba(139,98,237,0.14)]'
+                  : 'border-text-light/10 bg-bg-surface'
+              }`}
+            >
+              {plan.featured && (
+                <span className="absolute -top-3 left-6 rounded-full bg-primary px-3 py-1 text-xs font-bold text-text-inverse">
+                  {plan.badge}
+                </span>
+              )}
 
-          {/* الباقة الثانية */}
-          <div className="border-2 border-sky-600 p-8 rounded-2xl flex flex-col justify-between relative bg-sky-50/30">
-            <div>
-              <span className="bg-sky-600 text-white text-xs px-3 py-1 rounded-full absolute -top-3 right-8">الأكثر طلباً</span>
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">باقة المستشفيات والمراكز</h3>
-              <p className="text-slate-500 mb-6">مناسبة للمراكز الطبية الكبيرة والعيادات المتعددة التخصصات.</p>
-              <div className="text-4xl font-extrabold text-slate-900 mb-6">
-                2499 ج.م <span className="text-sm font-normal text-slate-500">/ شهرياً</span>
-              </div>
-            </div>
-            <button className="w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-3 rounded-lg transition duration-200">
-              اشترك الآن
-            </button>
-          </div>
+              <h3 className="text-2xl font-black text-text-main">{plan.name}</h3>
+              <p className="mt-4 text-base leading-7 text-text-muted">{plan.description}</p>
 
+              <div className="mt-8 flex items-end gap-2">
+                <span className="text-4xl font-black text-text-main">{plan.price}</span>
+                <span className="pb-1 text-sm font-medium text-text-muted">{plan.suffix}</span>
+              </div>
+
+              <ul className="mt-8 space-y-3 text-sm text-text-main">
+                {(plan.features || []).map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary-light text-primary">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                className={`mt-8 w-full rounded-full px-5 py-3 text-sm font-semibold transition ${
+                  plan.featured
+                    ? 'bg-primary text-text-inverse hover:bg-primary-hover'
+                    : 'bg-bg-main text-text-main hover:bg-bg-layout'
+                }`}
+              >
+                {plan.button}
+              </button>
+            </div>
+          ))}
         </div>
-
       </div>
     </section>
-  )
+  );
 }
 
-export default PlansSection
+export default PlansSection;

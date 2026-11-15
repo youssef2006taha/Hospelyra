@@ -1,35 +1,34 @@
-import React from 'react'
+import { Activity, BellRing, CalendarCheck2 } from 'lucide-react';
 
-function FeaturesSections({data}) {
-  const features = [
-    { title: "حجز موعد أونلاين", desc: "احجز كشفك أو استشارتك مع أفضل الأطباء بضغطة زر واحدة." },
-    { title: "الملف الطبي الشامل", desc: "سجل مرضي متكامل ومحدث لحظياً، متاح للطبيب والمريض في أي وقت." },
-    { title: "تنبيهات ومتابعة", desc: "إشعارات تلقائية بمواعيد الأدوية والاستشارات القادمة." }
-  ];
+const icons = [CalendarCheck2, Activity, BellRing];
 
+function FeaturesSections({ data }) {
   return (
-    <section className='py-section-padding bg-slate-50'>
-      <div className='cotainer'>
-        
-        {/* عنوان القسم */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">ليه تختار النظام بتاعنا؟</h2>
-          <div className="w-16 h-1 bg-sky-600 mx-auto rounded"></div>
+    <section className="bg-bg-secondary py-section-padding">
+      <div className="container">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">{data.eyebrow}</p>
+          <h2 className="mt-4 text-3xl font-black text-text-main md:text-4xl">{data.title}</h2>
         </div>
 
-        {/* كروت المميزات */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-              <h3 className="text-xl font-semibold text-slate-800 mb-2">{feature.title}</h3>
-              <p className="text-slate-600">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {data.items.map((feature, index) => {
+            const Icon = icons[index % icons.length];
 
+            return (
+              <div key={feature.title} className="rounded-[28px] border border-text-light/10 bg-bg-surface p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-light text-primary">
+                  <Icon size={26} />
+                </div>
+                <h3 className="mt-6 text-xl font-bold text-text-main">{feature.title}</h3>
+                <p className="mt-3 text-base leading-7 text-text-muted">{feature.description}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default FeaturesSections
+export default FeaturesSections;
