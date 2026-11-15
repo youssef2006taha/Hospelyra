@@ -1,8 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-import appReducer from '../features/app/appSlice.js'
+import langReducer from '../features/app/lang/langSlice.js'
+import layoutReducer from '../features/app/layout/layoutSlice.js'
+import uiReducer from '../features/app/ui/uiSlice.js'
+import toastReducer from '../features/app/ui/toast/toastSlice.js'
 
 export const store = configureStore({
   reducer: {
-    app: appReducer,
+    lang: langReducer,
+    layout: layoutReducer,
+    ui: uiReducer,
+    toast: toastReducer,
   },
 })

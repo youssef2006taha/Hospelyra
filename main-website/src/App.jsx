@@ -5,17 +5,14 @@ import { staticData } from './data/data.js';
 
 import AppLayout from './components/layout/AppLayout.jsx';
 import Toast from './components/ui/Toast.jsx';
-// Nav Pages
 import Home from './pages/home/Home.jsx';
 import FAQs from './pages/faqs/FAQs.jsx';
-import Contact from "./pages/contact/Contact.jsx"
+import Contact from './pages/contact/Contact.jsx';
 import Profile from './pages/profile/Profile.jsx';
-// Auth Pages
 import Login from './pages/login/Login.jsx';
 import Register from './pages/register/Register.jsx';
 import ForgetPassword from './pages/forget password/ForgetPassword.jsx';
 import SendOTP from './pages/send OTP/SendOTP.jsx';
-
 
 function App() {
   const theme = useSelector((state) => state.ui.theme);
@@ -25,7 +22,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.classList.toggle('dark', theme === 'dark');
     document.documentElement.dir = dir;
   }, [theme, dir]);
 

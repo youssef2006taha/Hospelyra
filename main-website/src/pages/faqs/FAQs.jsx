@@ -1,129 +1,50 @@
-import { useEffect, useState } from "react"
+import { useMemo, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
-const qts = [
-  {
-    id: 1,
-    question: "Impedit egestas aliquet?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 2,
-    question: "Sapien class quo temporibus?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 3,
-    question: "Elementum voluptate sodales?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 4,
-    question: "Lorem ipsum dolor sit amet consectetur adipiscing?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 5,
-    question: "Sed do eiusmod tempor incididunt ut labore?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 6,
-    question: "Duis aute irure dolor in reprehenderit in voluptate?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 7,
-    question: "Lorem ipsum dolor sit amet consectetur adipiscing?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 8,
-    question: "Sed do eiusmod tempor incididunt ut labore?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-  {
-    id: 9,
-    question: "Duis aute irure dolor in reprehenderit in voluptate?",
-    answe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-  },
-]
+function FAQs({ data }) {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-
-function FAQs({data}) {
-  const [mainId , setMainId] = useState(0)
-  const [subId , setSubId] = useState(0)
-
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1280)
-
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 1280)
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
-
-  let mainArray;
-  let subArray;
-
-  if(qts.length % 2 === 0) {
-    mainArray = isDesktop ? qts.slice(0, qts.length / 2) : qts
-    subArray = isDesktop ? qts.slice(qts.length / 2) : []
-  } else {
-    mainArray = isDesktop ? qts.slice(0, (qts.length / 2)+1) : qts
-    subArray = isDesktop ? qts.slice((qts.length / 2)+1) : []
-  }
-
-  const showQts = (arr, activeId, setActiveId) => {
-    return (
-      arr.map((qt) => (
-        <div 
-          key={qt.id}
-          className="p-5 bg-bg-surface rounded-lg"
-        >
-          <div
-            onClick={() => setActiveId(activeId !== qt.id ? qt.id : 0)}
-            className="cursor-pointer flex justify-between items-center"
-          >
-            <p className="pr-5">{`${qt.id}.${qt.question}`}</p>
-
-            <div className="relative w-5 h-5 flex items-center justify-center">
-              <div className="w-full h-1 bg-primary"/>
-              <div className={`absolute left-[50%] top-[50%] translate-[-50%] w-1 bg-primary transition-all duration-300 ${qt.id == activeId ? "h-0" : "h-full"}`}/>
-            </div>
-          </div>
-
-          <div className={`overflow-hidden transition-all duration-300 ${qt.id == activeId ? "max-h-50 pt-5" : "max-h-0"}`}>
-            <p className="text-sm">{qt.answe}</p>
-          </div>
-        </div>
-      ))
-    )
-  } 
+  const items = useMemo(() => data.items || [], [data.items]);
 
   return (
-    <section className="py-section-padding">
-      <div className="container">
-
-        <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight uppercase leading-tight">
-          Frequently Asked Questions
-        </h2>
-        
-        <div className='pt-10 flex flex-col xl:flex-row gap-5'>
-
-          <div className="space-y-5">
-            {showQts(mainArray, mainId, setMainId)}
-          </div>
-
-          <div className="space-y-5">
-            {showQts(subArray, subId, setSubId)}
-          </div>
-
+    <section className="bg-bg-main py-section-padding">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Hospelyra</p>
+          <h1 className="mt-4 text-4xl font-black text-text-main md:text-5xl">{data.title}</h1>
+          <p className="mt-4 text-lg text-text-muted">{data.subtitle}</p>
         </div>
 
+        <div className="mt-12 space-y-4">
+          {items.map((item, index) => {
+            const isOpen = activeIndex === index;
+
+            return (
+              <div key={item.question} className="overflow-hidden rounded-[24px] border border-text-light/10 bg-bg-secondary">
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex(isOpen ? -1 : index)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left md:px-6"
+                >
+                  <span className="text-base font-semibold text-text-main md:text-lg">{item.question}</span>
+                  <ChevronDown
+                    size={20}
+                    className={`shrink-0 text-primary transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+
+                <div className={`grid transition-all duration-300 ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                  <div className="overflow-hidden">
+                    <p className="px-5 pb-5 text-base leading-7 text-text-muted md:px-6">{item.answer}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default FAQs
+export default FAQs;

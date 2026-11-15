@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Footer({ data , navLinks }) {
-
+export default function Footer({ data, navLinks }) {
   return (
     <footer className="mt-auto border-t border-text-light/10 bg-bg-layout">
       <div className="container grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1.2fr] md:py-16">
@@ -40,7 +39,9 @@ export default function Footer({ data , navLinks }) {
       </div>
       <div className="border-t border-text-light/10">
         <div className="container flex flex-col gap-2 py-5 text-xs text-text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Hospelyra. {data.dataright}</p>
+          <p>
+            © {new Date().getFullYear()} {data.brand}. {data.copyright}
+          </p>
           <p>{data.statement}</p>
         </div>
       </div>
